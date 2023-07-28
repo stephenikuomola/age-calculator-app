@@ -1,0 +1,25 @@
+{
+  "name": "age-calculator-app",
+  "version": "1.0.0",
+  "description": "![Design preview for the Age calculator app coding challenge](./assets/design/desktop-preview.jpg)",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TraversetheDOM/age-calculator-app.git"
+  },
+  "keywords": [],
+  "author": "Stephen Ikuomola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TraversetheDOM/age-calculator-app/issues"
+  },
+  "homepage": "https://github.com/TraversetheDOM/age-calculator-app#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
