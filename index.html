@@ -3,7 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Mentor | Age calculator app</title>
+    <meta name="description" content="Building an age calculator application" />
+    <title>Age calculator app</title>
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="/src/css/main.css" />
+
+    <!-- JavaScript Link -->
+    <script type="module" src="/src/js/main.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="app-component">
+      <!-- Form component -->
+      <form class="form-component">
+        <div class="input-component">
+          <div class="input-component__day">
+            <label for="day">Day</label>
+            <input
+              type="text"
+              id="day"
+              name="day"
+              inputmode="numeric"
+              placeholder="DD"
+              aria-errormessage="day-errormessage"
+            />
+            <p aria-live="polite" id="day-errormessage" hidden></p>
+          </div>
+          <div class="input-component__month">
+            <label for="month">Month</label>
+            <input
+              type="text"
+              id="month"
+              name="month"
+              inputmode="numeric"
+              placeholder="MM"
+              aria-errormessage="month-errormessage"
+            />
+            <p aria-live="polite" id="month-errormessage" hidden></p>
+          </div>
+          <div class="input-component__year">
+            <label for="month">Year</label>
+            <input
+              type="text"
+              id="year"
+              name="year"
+              inputmode="numeric"
+              placeholder="YYYY"
+              aria-errormessage="year-errormessage"
+            />
+            <p aria-live="polite" id="year-errormessage" hidden></p>
+          </div>
+        </div>
+        <div class="submit-component">
+          <div class="stroke" aria-hidden="true"></div>
+          <button type="submit" class="btn-submit" aria-label="submit values">
+            <img
+              src="/assets/images/icon-arrow.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
+        </div>
+      </form>
+
+      <!-- Display age component -->
+      <div class="display-age-component"></div>
+    </div>
+  </body>
 </html>

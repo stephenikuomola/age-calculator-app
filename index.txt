@@ -10,3 +10,14 @@
   -- years
   -- months
   -- days
+
+  So let us say the current day of the month is 30th August
+  The person's birthday is on the 31st August. 
+
+  30 - 31 = -1 days
+
+  We need to borrow the days from the previous month to calculate the difference in days between the two dates. 
+
+  We can get the previous date by doing new Date(currentYear, currentMonth, 0). The 0 there will ensure we will get the previous month's date on the last day, which as of now is Monday, July, 31st. 
+
+  We can use the getDate() method on the previous month last date to obtain the number of days for the previous month. 
