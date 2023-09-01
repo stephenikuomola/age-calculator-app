@@ -250,7 +250,7 @@ input[aria-invalid="true"] {
   border: 1px solid var(--light-red);
 }
 
-/* Unfortunately this does not work in FireFox yet so I will use JavaScript for this, but one day we will be free. */
+/* Unfortunately this code below does not work in FireFox yet so I will use JavaScript for this, but one day we will be free. */
 
 /* label:has(+ input[aria-invalid="true"]) {
   color: var(--light-red);
