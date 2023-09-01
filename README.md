@@ -5,7 +5,7 @@
   app also takes Leap years into consideration. <br />
   Responsive for all devices using HTML, CSS and JavaScript.
   <br />
-  <a href="https://calculateyourage.netlify.app/"
+  <a href="https://agecalculator-ng.netlify.app/"
     ><strong>➥ Live Demo</strong></a
   >
 </div>
