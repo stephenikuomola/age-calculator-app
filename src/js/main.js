@@ -112,8 +112,8 @@ class AppComponent {
 
     // FireFox throw an error when you pass in the month and days as 1 instead 01 so I account for this here.
     // The year is ok because we cannot go below 1970 and above the current year which is 2023 at this point.
-    const monthFormat = month < 10 ? `0${month}` : `${month}`;
-    const dayFormat = day < 10 ? `0${day}` : `${day}`;
+
+    const [monthFormat, dayFormat] = this.#formatMonthAndDay(month, day);
 
     // MAKING USE OF THE DATE TIME STRING FORMAT --> YYYY-MM-DDTHH:mm:ss:sssZ
     const birthdayDate = new Date(
@@ -125,6 +125,18 @@ class AppComponent {
     // The next step is to display the result and update the UI.
 
     this.#displayAge(age);
+  }
+
+  /**
+   * A method that returns an array of strings with the month input in the MM format and day in DD always.
+   * @param {number} month - The month input
+   * @param {number} day - The day input
+   * @returns {string[]} - An array of strings
+   */
+  #formatMonthAndDay(month, day) {
+    const months = month < 10 ? `0${month}` : `${month}`;
+    const days = day < 10 ? `0${day}` : `${day}`;
+    return [months, days];
   }
 
   /**
@@ -228,6 +240,10 @@ class AppComponent {
     const epochDate = new Date(1000);
     const indexedMonth = month - 1;
 
+    const [monthFormat, dayFormat] = this.#formatMonthAndDay(month, day);
+
+    const dateInput = new Date(`${year}-${monthFormat}-${dayFormat}T00:00:00Z`);
+
     const currentYear = currentDate.getFullYear();
     const epochYear = epochDate.getFullYear();
 
@@ -240,28 +256,27 @@ class AppComponent {
     const checkMinYear = year < epochYear;
     const checkMinDay = day < monthsInAYear[indexedMonth]?.startDate;
     const checkMaxDay = day > monthsInAYear[indexedMonth]?.endDate;
+    const checkInputDate = dateInput > currentDate;
 
     if (
       checkIndexMonth ||
       checkMaxYear ||
       checkMinYear ||
       checkMinDay ||
-      checkMaxDay
+      checkMaxDay ||
+      checkInputDate
     ) {
-      if (indexedMonth < 0 || indexedMonth > 11) {
+      if (checkIndexMonth) {
         this.#showErrorMessage(this.#monthInput, "Must be a valid month");
       }
 
-      if (year > currentYear) {
+      if (checkMaxYear || checkInputDate) {
         this.#showErrorMessage(this.#yearInput, "Must be in the past");
-      } else if (year < epochYear) {
+      } else if (checkMinYear) {
         this.#showErrorMessage(this.#yearInput, "Must be more than 1970");
       }
 
-      if (
-        day < monthsInAYear[indexedMonth]?.startDate ||
-        day > monthsInAYear[indexedMonth]?.endDate
-      ) {
+      if (checkMinDay || checkMaxDay) {
         this.#showErrorMessage(this.#dayInput, "Must be a valid date");
       } else if (day < 1 || day > 31) {
         this.#showErrorMessage(this.#dayInput, "Must be a valid day");

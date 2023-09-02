@@ -1,23 +1,20 @@
 :root {
-  /* Color */
-  --purple: hsl(259, 100%, 65%);
-  --light-red: hsl(0, 100%, 67%);
-  --white: hsl(0, 0%, 100%);
-  --off-white: hsl(0, 0%, 94%);
-  --light-grey: hsl(0, 0%, 86%);
-  --smokey-grey: hsl(0, 1%, 44%);
-  --off-black: hsl(0, 0%, 8%);
-
-  /* Gap */
+  --purple: #854cff;
+  --light-red: #ff5757;
+  --white: #fff;
+  --off-white: #f0f0f0;
+  --light-grey: #dbdbdb;
+  --smokey-grey: #716f6f;
+  --off-black: #141414;
   --gap-0: 0px;
   --gap-1: 1px;
-  --gap-1_25: 0.125rem;
-  --gap-2_5: 0.25rem;
-  --gap-3_75: 0.375rem;
-  --gap-5: 0.5rem;
-  --gap-6_25: 0.625rem;
-  --gap-7_5: 0.75rem;
-  --gap-8_75: 0.875rem;
+  --gap-1_25: .125rem;
+  --gap-2_5: .25rem;
+  --gap-3_75: .375rem;
+  --gap-5: .5rem;
+  --gap-6_25: .625rem;
+  --gap-7_5: .75rem;
+  --gap-8_75: .875rem;
   --gap-10: 1rem;
   --gap-12_5: 1.25rem;
   --gap-15: 1.5rem;
@@ -43,8 +40,6 @@
   --gap-180: 18rem;
   --gap-200: 20rem;
   --gap-240: 24rem;
-
-  /* Display */
   --hidden: none;
   --block: block;
   --inline: inline;
@@ -53,8 +48,6 @@
   --inline-flex: inline-flex;
   --grid: grid;
   --inline-grid: inline-grid;
-
-  /* Radius */
   --radius-1: 2px;
   --radius-2: 4px;
   --radius-3: 6px;
@@ -73,12 +66,10 @@
   --radius-16: 40px;
   --radius-17: var(--radius-8) var(--radius-8) 104px var(--radius-8);
   --radius-18: var(--radius-8) var(--radius-8) 200px var(--radius-8);
-
-  /* Typography */
   --ff-Poppins: "Poppins";
   --ff-Poppins-sans-serif: var(--ff-Poppins), sans-serif;
-  --fs-1: 0.75rem;
-  --fs-2: 0.875rem;
+  --fs-1: .75rem;
+  --fs-2: .875rem;
   --fs-3: 1.25rem;
   --fs-4: 2rem;
   --fs-5: 3.5rem;
@@ -92,66 +83,54 @@
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.625;
   --line-height-loose: 2;
-  --letter-spacing-tighter: -0.05em;
-  --letter-spacing-tight: -0.025em;
+  --letter-spacing-tighter: -.05em;
+  --letter-spacing-tight: -.025em;
   --letter-spacing-normal: 0em;
-  --letter-spacing-wide: 0.025em;
-  --letter-spacing-wider: 0.05em;
-  --letter-spacing-widest: 0.1em;
+  --letter-spacing-wide: .025em;
+  --letter-spacing-wider: .05em;
+  --letter-spacing-widest: .1em;
 }
 
 @font-face {
   font-family: var(--ff-Poppins);
   font-weight: var(--fw-700);
   font-style: normal;
-  src: url(/assets/fonts/poppins-bold-webfont.woff2) format("woff2"),
-    url(/assets/fonts/poppins-bold-webfont.woff) format("woff"),
-    url(/assets/fonts/Poppins-Bold.ttf) format("ttf");
+  src: url("poppins-bold-webfont.dcc908d5.woff2") format("woff2"), url("poppins-bold-webfont.2c785379.woff") format("woff"), url("Poppins-Bold.49d8d33c.ttf") format("ttf");
 }
 
 @font-face {
   font-family: var(--ff-Poppins);
   font-weight: var(--fw-700);
   font-style: italic;
-  src: url(/assets/fonts/poppins-bolditalic-webfont.woff2) format("woff2"),
-    url(/assets/fonts/poppins-bolditalic-webfont.woff) format("woff"),
-    url(/assets/fonts/Poppins-BoldItalic.ttf) format("ttf");
+  src: url("poppins-bolditalic-webfont.cae20e5e.woff2") format("woff2"), url("poppins-bolditalic-webfont.517f4e3a.woff") format("woff"), url("Poppins-BoldItalic.80931fb5.ttf") format("ttf");
 }
 
 @font-face {
   font-family: var(--ff-Poppins);
   font-weight: var(--fw-800);
   font-style: normal;
-  src: url(/assets/fonts/poppins-extrabold-webfont.woff2) format("woff2"),
-    url(/assets/fonts/poppins-extrabold-webfont.woff) format("woff"),
-    url(/assets/fonts/Poppins-ExtraBold.ttf) format("ttf");
+  src: url("poppins-extrabold-webfont.b1d16a96.woff2") format("woff2"), url("poppins-extrabold-webfont.be9c3bce.woff") format("woff"), url("Poppins-ExtraBold.53863e4c.ttf") format("ttf");
 }
 
 @font-face {
   font-family: var(--ff-Poppins);
   font-weight: var(--fw-800);
   font-style: italic;
-  src: url(/assets/fonts/poppins-extrabolditalic-webfont.woff2) format("woff2"),
-    url(/assets/fonts/poppins-extrabolditalic-webfont.woff) format("woff"),
-    url(/assets/fonts/Poppins-ExtraBoldItalic.ttf) format("ttf");
+  src: url("poppins-extrabolditalic-webfont.b72bbfff.woff2") format("woff2"), url("poppins-extrabolditalic-webfont.a8099e95.woff") format("woff"), url("Poppins-ExtraBoldItalic.dbe4f0fb.ttf") format("ttf");
 }
 
 @font-face {
   font-family: var(--ff-Poppins);
   font-weight: var(--fw-400);
   font-style: italic;
-  src: url(/assets/fonts/poppins-italic-webfont.woff2) format("woff2"),
-    url(/assets/fonts/poppins-italic-webfont.woff) format("woff"),
-    url(/assets/fonts/Poppins-Italic.ttf) format("ttf");
+  src: url("poppins-italic-webfont.fed442f3.woff2") format("woff2"), url("poppins-italic-webfont.e9c3ef2a.woff") format("woff"), url("Poppins-Italic.ce216842.ttf") format("ttf");
 }
 
 @font-face {
   font-family: var(--ff-Poppins);
   font-weight: var(--fw-400);
   font-style: normal;
-  src: url(/assets/fonts/poppins-regular-webfont.woff2) format("woff2"),
-    url(/assets/fonts/poppins-regular-webfont.woff) format("woff"),
-    url(/assets/fonts/Poppins-Regular.ttf) format("ttf");
+  src: url("poppins-regular-webfont.cbaf584f.woff2") format("woff2"), url("poppins-regular-webfont.bd70e844.woff") format("woff"), url("Poppins-Regular.5303317e.ttf") format("ttf");
 }
 
 * {
@@ -159,9 +138,7 @@
   padding: 0;
 }
 
-*,
-*::after,
-*::before {
+*, :after, :before {
   box-sizing: border-box;
 }
 
@@ -169,44 +146,36 @@ html {
   font-family: var(--ff-Poppins-sans-serif);
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
 body {
   background-color: var(--off-white);
-  overflow: hidden;
+  text-rendering: optimizespeed;
+  line-height: var(--line-height-normal);
   width: 100%;
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: var(--line-height-normal);
+  overflow: hidden;
 }
 
 main {
   display: var(--flex);
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
-input[type="text"],
-label {
+input[type="text"], label {
   display: var(--block);
 }
 
-/* App Component */
 div[class="app-component"] {
   background-color: var(--white);
-  width: min(90%, 840px);
   padding-block: var(--gap-30);
   padding-inline: var(--gap-15);
   border-radius: var(--radius-17);
+  width: min(90%, 840px);
 }
 
 div[class="input-component"] {
@@ -230,11 +199,11 @@ input[type="text"] {
   border: 1px solid var(--light-grey);
   padding-inline: var(--gap-10);
   padding-block: var(--gap-7_5);
-  width: 100%;
-  outline: none;
   font-weight: var(--fw-700);
   font-size: var(--fs-3);
   color: var(--black);
+  outline: none;
+  width: 100%;
 }
 
 input[type="text"]:is(:focus, :focus-visible) {
@@ -254,39 +223,33 @@ input[aria-invalid="true"] {
   border: 1px solid var(--light-red);
 }
 
-/* Unfortunately this code below does not work in FireFox yet so I will use JavaScript for this, but one day we will be free. */
-
-/* label:has(+ input[aria-invalid="true"]) {
-  color: var(--light-red);
-} */
-
 div[class="submit-component"] {
-  position: relative;
   margin-bottom: var(--gap-40);
+  position: relative;
 }
 
 div[class="stroke"] {
-  height: 0.0625rem;
-  width: 100%;
   background-color: var(--light-grey);
+  width: 100%;
+  height: .0625rem;
 }
 
 .btn-submit {
+  appearance: none;
+  background-color: var(--purple);
+  aspect-ratio: 1;
+  display: var(--flex);
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
   position: absolute;
   top: 0;
   right: 50%;
   transform: translate(50%, -50%);
-  appearance: none;
-  background-color: var(--purple);
-  border-radius: 50%;
-  width: 4rem;
-  aspect-ratio: 1;
-  display: var(--flex);
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border: none;
-  outline: none;
 }
 
 .btn-submit:focus-visible {
@@ -300,9 +263,9 @@ div[class="stroke"] {
 div[class~="show"][class~="display-age-component"] {
   visibility: visible;
   opacity: 1;
-  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transform: scale(1);
   transform-origin: center;
+  transition: all .5s cubic-bezier(.215, .61, .355, 1);
+  transform: scale(1);
 }
 
 div[class~="display-age-component"] {
@@ -323,8 +286,7 @@ div[class~="display-age-component"] > p > span {
   color: var(--purple);
 }
 
-/* Devices with a width of 1440px and above will be targeted  */
-@media only screen and (min-width: 90em) {
+@media only screen and (width >= 90em) {
   div[class="app-component"] {
     padding-block: var(--gap-35);
     padding-inline: var(--gap-35);
@@ -347,17 +309,17 @@ div[class~="display-age-component"] > p > span {
 
   input[type="text"] {
     padding-inline: var(--gap-15);
-    outline: none;
-    width: 100%;
     font-weight: var(--fw-700);
     font-size: var(--fs-3);
     color: var(--black);
+    outline: none;
+    width: 100%;
   }
 
   input[type="text"]::placeholder {
     font: inherit;
     color: var(--off-black);
-    opacity: 0.5;
+    opacity: .5;
   }
 
   div[class="submit-component"] {
@@ -378,3 +340,5 @@ div[class~="display-age-component"] > p > span {
     font-size: var(--fs-6);
   }
 }
+
+/*# sourceMappingURL=index.34df27b5.css.map */
