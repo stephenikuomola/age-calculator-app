@@ -181,7 +181,7 @@ h6 {
 
 body {
   background-color: var(--off-white);
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100%;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
@@ -213,6 +213,10 @@ div[class="input-component"] {
   display: var(--flex);
   gap: var(--gap-10);
   margin-bottom: var(--gap-40);
+}
+
+div[class="input-component"] > * {
+  flex: 1;
 }
 
 label {
