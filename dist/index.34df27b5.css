@@ -156,7 +156,7 @@ body {
   line-height: var(--line-height-normal);
   width: 100%;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 main {
@@ -182,10 +182,6 @@ div[class="input-component"] {
   display: var(--flex);
   gap: var(--gap-10);
   margin-bottom: var(--gap-40);
-}
-
-div[class="input-component"] > * {
-  flex: 1;
 }
 
 label {

@@ -215,10 +215,6 @@ div[class="input-component"] {
   margin-bottom: var(--gap-40);
 }
 
-div[class="input-component"] > * {
-  flex: 1;
-}
-
 label {
   margin-bottom: var(--gap-2_5);
   text-transform: uppercase;
